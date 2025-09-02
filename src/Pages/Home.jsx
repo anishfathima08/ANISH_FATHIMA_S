@@ -15,14 +15,14 @@ const Home = () => {
     <>
         <Header />
         <Hero />
-        <About />
-        <Skill />
-        <Experience />
-        <Education />
-        <Project />
-        <Certificate />
-        <Contact />
-        <Footer />    
+        {/* <About /> */}
+        {/* <Skill /> */}
+        {/* <Experience /> */}
+        {/* <Education /> */}
+        {/* <Project /> */}
+        {/* <Certificate /> */}
+        {/* <Contact /> */}
+        {/* <Footer /> */}
     </>
   )
 }
