@@ -16,10 +16,10 @@ const Home = () => {
         <Header />
         <Hero />
         {/* <About /> */}
-        {/* <Skill /> */}
+        <Skill />
         {/* <Experience /> */}
         {/* <Education /> */}
-        {/* <Project /> */}
+        <Project />
         {/* <Certificate /> */}
         {/* <Contact /> */}
         {/* <Footer /> */}

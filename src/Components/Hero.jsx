@@ -1,18 +1,17 @@
 import React, { useContext } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FaDownload, FaLinkedin } from "react-icons/fa";
+import { FaDownload, FaLinkedin, FaGithub } from "react-icons/fa";
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 import { myContext } from "../Context/ContextProvider";
 
 const Hero = () => {
   
-  const { particlesInit } = useContext(myContext)
+  const { particlesInit } = useContext(myContext);
 
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center text-center px-6"
+      className="relative h-screen flex items-center justify-center text-center px-6 lg:mt-10"
     >
       {/* Background Particles */}
       <Particles
@@ -49,9 +48,8 @@ const Hero = () => {
       <div className="max-w-3xl">
         {/* Static Name */}
         <h1 className="text-4xl md:text-6xl font-bold text-white">
-          Hi, I'm{" "}
           <span className="bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-            Anis Fathima
+            Hi, I'm Anis Fathima
           </span>
         </h1>
 
@@ -65,6 +63,8 @@ const Hero = () => {
               1500,
               "React Enthusiast",
               1500,
+              "Backend Developer",
+              1500,
             ]}
             speed={50}
             repeat={Infinity}
@@ -72,27 +72,40 @@ const Hero = () => {
         </h2>
 
         {/* Quote */}
-        <p className="mt-4 text-lg md:text-xl text-zinc-400">
-          "Turning ideas into smooth and interactive web experiences."
-        </p>
+        <div className="mt-6 space-y-2 text-lg md:text-xl text-zinc-400">
+          <p>"Turning ideas into reality."</p>
+          <p>"Building smooth and interactive web experiences."</p>
+          <p>"Passionate about clean, modern UI & scalable solutions."</p>
+        </div>
 
-        {/* Buttons */}
-        <div className="mt-6 flex flex-wrap justify-center gap-4">
+        {/* Social Icons */}
+        <div className="mt-6 flex justify-center gap-6">
+          <a
+            href="https://www.linkedin.com/in/anishfathima/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-zinc-300 transition-transform duration-300 hover:scale-125 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com/anishfathima08"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-3xl text-zinc-300 transition-transform duration-300 hover:scale-125 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+          >
+            <FaGithub />
+          </a>
+        </div>
+
+        {/* Download Button */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="/AnishFathimaResume.pdf"
             download
-            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 text-white shadow-md hover:shadow-lg hover:opacity-90 transition"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl text-white bg-gradient-to-r from-fuchsia-500 via-indigo-500 to-cyan-500 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_12px_rgba(255,255,255,0.7)]"
           >
             <FaDownload /> Download CV
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/your-linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10 transition"
-          >
-            <FaLinkedin /> LinkedIn
           </a>
         </div>
       </div>

@@ -1,38 +1,67 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { myContext } from "../Context/ContextProvider";
 
 const Header = () => {
+  const { navbarOpen, setNavbarOpen } = useContext(myContext);
+  const [activeSection, setActiveSection] = useState("home");
 
-  const { navbarOpen, setNavbarOpen } = useContext(myContext)
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // section is "active" when 60% is visible
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
+  const navLinks = [
+    { id: "skills", label: "Skills" },
+    { id: "experience", label: "Experience" },
+    { id: "education", label: "Education" },
+    { id: "projects", label: "Projects" },
+    { id: "certificates", label: "Certificates" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
     <header className="fixed top-4 left-0 w-full z-50">
       {/* Navbar Wrapper */}
-      <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/20">
+      <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/40">
         <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           {/* Logo / Brand */}
           <a
             href="#home"
-            className="text-2xl font-bold tracking-tight bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent"
+            className="text-3xl font-bold tracking-tight bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
           >
             Anis Fathima
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <a href="#about" className="text-zinc-300 hover:text-white transition">About</a>
-            <a href="#skills" className="text-zinc-300 hover:text-white transition">Skills</a>
-            <a href="#experience" className="text-zinc-300 hover:text-white transition">Experience</a>
-            <a href="#education" className="text-zinc-300 hover:text-white transition">Education</a>
-            <a href="#projects" className="text-zinc-300 hover:text-white transition">Projects</a>
-            <a href="#certificates" className="text-zinc-300 hover:text-white transition">Certificates</a>
-            <a
-              href="#contact"
-              className="px-4 py-2 rounded-2xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 text-white shadow-md hover:shadow-lg hover:opacity-90 transition"
-            >
-              Contact
-            </a>
+          <div className="hidden lg:flex items-center space-x-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                className={`px-3 py-1 rounded-full transition 
+                  ${
+                    activeSection === link.id
+                      ? "bg-gradient-to-r from-fuchsia-500 to-indigo-500 text-white shadow-md"
+                      : "text-zinc-300 hover:text-white"
+                  }`}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -52,19 +81,21 @@ const Header = () => {
         }`}
       >
         <div className="flex flex-col space-y-4 p-6">
-          <a href="#about" className="text-zinc-300 hover:text-white" onClick={() => setNavbarOpen(false)}>About</a>
-          <a href="#skills" className="text-zinc-300 hover:text-white" onClick={() => setNavbarOpen(false)}>Skills</a>
-          <a href="#experience" className="text-zinc-300 hover:text-white" onClick={() => setNavbarOpen(false)}>Experience</a>
-          <a href="#education" className="text-zinc-300 hover:text-white" onClick={() => setNavbarOpen(false)}>Education</a>
-          <a href="#projects" className="text-zinc-300 hover:text-white" onClick={() => setNavbarOpen(false)}>Projects</a>
-          <a href="#certificates" className="text-zinc-300 hover:text-white" onClick={() => setNavbarOpen(false)}>Certificates</a>
-          <a
-            href="#contact"
-            className="px-4 py-2 rounded-2xl text-center bg-gradient-to-r from-fuchsia-500 to-indigo-500 text-white shadow-md hover:shadow-lg hover:opacity-90 transition"
-            onClick={() => setNavbarOpen(false)}
-          >
-            Contact
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={`px-3 py-2 rounded-full text-center transition
+                ${
+                  activeSection === link.id
+                    ? "bg-gradient-to-r from-fuchsia-500 to-indigo-500 text-white shadow-md"
+                    : "text-zinc-300 hover:text-white"
+                }`}
+              onClick={() => setNavbarOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </header>
