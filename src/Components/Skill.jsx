@@ -22,7 +22,7 @@ const skills = [
 
 const Skill = () => {
   return (
-    <section id="skills" className="lg:px-15 px-5 py-16 bg-red-800">
+    <section id="skills" className="lg:px-15 px-5 py-16">
       <h1 className="text-5xl font-bold text-center text-white mb-12">
         <span className="bg-cyan-400 bg-clip-text text-transparent" style={{ fontFamily: "'Dancing Script', cursive" }}>Tech Stack</span>
       </h1>
@@ -41,7 +41,7 @@ const Skill = () => {
         breakpoints={{
           320: { slidesPerView: 2, spaceBetween: 20 },
           640: { slidesPerView: 3, spaceBetween: 25 },
-          1024: { slidesPerView: 4, spaceBetween: 30 },
+          1024: { slidesPerView: 5, spaceBetween: 30 },
         }}
         className="p-8"
       >
