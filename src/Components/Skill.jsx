@@ -22,7 +22,7 @@ const skills = [
 
 const Skill = () => {
   return (
-    <section id="skills" className="lg:px-15 px-5 py-16">
+    <section id="skills" className="lg:px-15 px-5 py-10">
       <h1 className="text-5xl font-bold text-center text-white mb-12">
         <span className="bg-cyan-400 bg-clip-text text-transparent" style={{ fontFamily: "'Dancing Script', cursive" }}>Tech Stack</span>
       </h1>

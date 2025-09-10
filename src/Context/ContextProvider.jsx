@@ -8,21 +8,12 @@ const ContextProvider = ({children}) => {
 
     const [ navbarOpen, setNavbarOpen ] = useState(false);
 
-    // Hero
-
-    const particlesInit = async (main) => {
-        await loadFull(main);
-    };
-
     const myContextValue = {
 
         // Header
 
         navbarOpen, setNavbarOpen,
 
-        // Hero 
-
-        particlesInit
     }
 
     return (

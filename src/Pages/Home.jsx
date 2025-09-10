@@ -17,10 +17,10 @@ const Home = () => {
         <Hero />
         {/* <About /> */}
         <Skill />
-        {/* <Experience /> */}
-        {/* <Education /> */}
+        <Experience />
+        <Education />
         <Project />
-        {/* <Certificate /> */}
+        <Certificate />
         {/* <Contact /> */}
         {/* <Footer /> */}
     </>

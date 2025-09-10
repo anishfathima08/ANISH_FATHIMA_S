@@ -1,54 +1,19 @@
 import React, { useContext } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { FaDownload, FaLinkedin, FaGithub } from "react-icons/fa";
-import Particles from "react-tsparticles";
-import { myContext } from "../Context/ContextProvider";
 
 const Hero = () => {
   
-  const { particlesInit } = useContext(myContext);
-
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center text-center px-6 lg:mt-10"
+      className="relative flex items-center justify-center text-center lg:pt-35 lg:py-12 pt-30 py-12"
     >
-      {/* Background Particles */}
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        className="absolute inset-0 -z-10"
-        options={{
-          background: { color: "transparent" },
-          fpsLimit: 60,
-          interactivity: {
-            events: {
-              onHover: { enable: true, mode: "repulse" },
-            },
-          },
-          particles: {
-            color: { value: "#ffffff" },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.2,
-              width: 1,
-            },
-            move: { enable: true, speed: 2 },
-            number: { value: 60, density: { enable: true, area: 800 } },
-            opacity: { value: 0.3 },
-            size: { value: { min: 1, max: 3 } },
-          },
-          detectRetina: true,
-        }}
-      />
-
       {/* Hero Content */}
       <div className="max-w-3xl">
         {/* Static Name */}
         <h1 className="text-4xl md:text-6xl font-bold text-white">
-          <span className="bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent" style={{ fontFamily: "'Dancing Script', cursive" }}>
             Hi, I'm Anis Fathima
           </span>
         </h1>
