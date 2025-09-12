@@ -48,7 +48,7 @@ const Skill = () => {
         {skills.map((skill, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`flex flex-col items-center justify-center lg:h-32 lg:w-40 rounded-lg border ${skill.border} shadow-lg text-white transition-transform duration-300 hover:scale-110 lg:mt-10 lg:mb-5 py-5`}
+              className={`flex flex-col items-center justify-center lg:h-32 lg:w-40 rounded-lg border ${skill.border} shadow-lg text-white transition-transform duration-300 hover:scale-120 lg:mt-10 lg:mb-5 py-5`}
             >
               {skill.icon}
               <p className="mt-2 text-sm font-semibold">{skill.name}</p>

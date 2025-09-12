@@ -123,7 +123,7 @@ const Header = () => {
           }
         });
       },
-      { threshold: 0.3 } // 👈 catches smaller sections like projects
+      { threshold: 0.3 } 
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -142,7 +142,7 @@ const Header = () => {
   return (
     <header className="fixed top-4 left-0 w-full z-50">
       {/* Navbar Wrapper */}
-      <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/40">
+      <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/20">
         <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           {/* Logo */}
           <a
