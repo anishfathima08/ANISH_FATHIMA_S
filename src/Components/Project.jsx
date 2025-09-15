@@ -6,11 +6,11 @@ const Project = () => {
   return (
     <section
       id="projects"
-      className="bg-black py-20 min-h-screen" 
+      className="py-8 min-h-screen bg-red-500" 
     >
       <h2 className="text-5xl font-bold text-center text-white mb-12">
         <span
-          className="bg-cyan-400 bg-clip-text text-transparent"
+          className="text-white"
           style={{ fontFamily: "'Dancing Script', cursive" }}
         >
           Projects
