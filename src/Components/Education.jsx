@@ -6,7 +6,7 @@ const Education = () => {
   const { education } = useContext(myContext)
 
   return (
-    <section id="education" className="py-16 px-6 bg-blue-300">
+    <section id="education" className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-5xl font-bold text-center mb-12">

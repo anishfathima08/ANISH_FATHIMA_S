@@ -6,7 +6,7 @@ const Project = () => {
   return (
     <section
       id="projects"
-      className="py-8 min-h-screen bg-red-500" 
+      className="py-8 min-h-screen" 
     >
       <h2 className="text-5xl font-bold text-center text-white mb-12">
         <span
