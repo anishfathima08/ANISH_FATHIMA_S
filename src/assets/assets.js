@@ -7,6 +7,12 @@ import ProjectImg6 from "./Projects/petzee.png";
 
 import MernCertificate from "./Certificates/MERNCourse.jpg";
 
+import AboutImg from './About/AboutImg.png'
+
+export const assets = {
+  AboutImg
+}
+
 export const projects = [
   {
     title: "CarVilla",

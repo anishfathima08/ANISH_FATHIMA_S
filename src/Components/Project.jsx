@@ -17,7 +17,7 @@ const Project = () => {
         </span>
       </h2>
 
-      <div className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0">
+      <div className="max-w-6xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -31,12 +31,13 @@ const Project = () => {
             />
 
             {/* Hover Overlay */}
+
             <div className="absolute inset-0 bg-black/80 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition">
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-3xl hover:text-fuchsia-400 transition"
+                className="text-white text-3xl transition-transform transform hover:-translate-y-2"
               >
                 <FaGithub />
               </a>
@@ -44,11 +45,12 @@ const Project = () => {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-3xl hover:text-cyan-400 transition"
+                className="text-white text-3xl transition-transform transform hover:-translate-y-2"
               >
                 <FaExternalLinkAlt />
               </a>
             </div>
+
 
             {/* Content */}
             <div className="p-5 text-white">
