@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { FiSend } from "react-icons/fi";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
-    number: "",
     subject: "",
   });
 
@@ -14,14 +14,10 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { name, number, subject } = formData;
+    const { name, subject } = formData;
+    const phoneNumber = "917339470506"; // include country code
 
-    const phoneNumber = "917339470506";
-
-    const message = `Hello, I am ${name}.
-    Phone: ${number}
-    Message: ${subject}`;
-
+    const message = `Hello, I am ${name}, ${subject}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
@@ -30,56 +26,63 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16">
-      <h2 className="text-5xl font-bold text-center text-white mb-12">
+    <section id="contact" className="py-20">
+      {/* Heading */}
+      <h2 className="text-5xl font-bold text-center text-white mb-16">
         <span style={{ fontFamily: "'Dancing Script', cursive" }}>
-          Contact Me
+          Let’s Connect
         </span>
       </h2>
 
-      <div className="max-w-2xl mx-auto px-6">
+      {/* Form */}
+      <div className="max-w-lg mx-auto">
+        {/* <form
+          onSubmit={handleSubmit}
+          className="bg-zinc-900/80 border border-zinc-100 rounded-2xl p-10 
+          shadow-[0_0_25px_rgba(192,192,192,0.35)] space-y-10"
+        > */}
         <form
           onSubmit={handleSubmit}
-          className="bg-zinc-900 p-8 rounded-2xl shadow-lg space-y-6 border border-zinc-700"
+          className="bg-zinc-900/80 border border-zinc-400 rounded-2xl p-10 space-y-10"
         >
           {/* Name */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-lg bg-black text-white placeholder-gray-400 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
-          />
+          <div className="relative">
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="peer w-full border-b border-zinc-600 bg-transparent text-white placeholder-transparent focus:outline-none focus:border-white text-lg py-3 mt-5"
+              placeholder="Your Name"
+            />
+            <label className="absolute left-0 top-0 text-gray-200 text-sm pointer-events-none transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-100 peer-focus:top-0 peer-focus:text-sm peer-focus:text-white">
+              Your Name
+            </label>
+          </div>
 
-          {/* Number */}
-          <input
-            type="tel"
-            name="number"
-            placeholder="Your Phone Number"
-            value={formData.number}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-lg bg-black text-white placeholder-gray-400 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
-          />
+          {/* Message */}
+          <div className="relative">
+            <textarea
+              name="subject"
+              rows="3"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="peer w-full border-b border-zinc-600 bg-transparent text-white placeholder-transparent focus:outline-none focus:border-white text-lg py-3 mt-5"
+              placeholder="Your Message"
+            />
+            <label className="absolute left-0 top-0 text-gray-200 text-sm pointer-events-none transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-100 peer-focus:top-0 peer-focus:text-sm peer-focus:text-white">
+              Your Message
+            </label>
+          </div>
 
-          {/* Subject */}
-          <textarea
-            name="subject"
-            placeholder="Your Message / Subject"
-            rows="4"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-lg bg-black text-white placeholder-gray-400 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-white"
-          />
-
-          {/* Submit */}
+          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition"
+            className="flex items-center justify-center gap-2 w-full py-3 rounded-lg border border-white text-white font-semibold tracking-wide hover:bg-white hover:text-black transition"
           >
+            <FiSend className="text-xl" />
             Send on WhatsApp
           </button>
         </form>

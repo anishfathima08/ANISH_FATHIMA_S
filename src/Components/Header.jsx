@@ -21,7 +21,7 @@ const Header = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-3">
             {navLinks.map((link) => (
               <a
                 key={link.id}

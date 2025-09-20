@@ -12,29 +12,17 @@ const ContextProvider = ({children}) => {
     const [ navbarOpen, setNavbarOpen ] = useState(false);
 
     const navLinks = [
+        { id: "home", label: "Home" },
+        { id: "about", label: "About" },
         { id: "skills", label: "Skills" },
         { id: "experience", label: "Experience" },
-        { id: "education", label: "Education" },
         { id: "projects", label: "Projects" },
+        { id: "education", label: "Education" },
         { id: "certificates", label: "Certificates" },
         { id: "contact", label: "Contact" },
     ];
 
     // Skills
-
-    // const skills = [
-    //   { icon: <FaHtml5 className="text-orange-500 text-5xl" />, name: "HTML", border: "border-orange-500" },
-    //   { icon: <FaHtml5 className="text-white text-5xl" />, name: "HTML", border: "border-white" },
-    //   { icon: <FaCss3Alt className="text-blue-500 text-5xl" />, name: "CSS", border: "border-blue-500" },
-    //   { icon: <FaBootstrap className="text-purple-600 text-5xl" />, name: "Bootstrap", border: "border-purple-600" },
-    //   { icon: <SiTailwindcss className="text-cyan-400 text-5xl" />, name: "Tailwind CSS", border: "border-cyan-400" },
-    //   { icon: <FaJs className="text-yellow-400 text-5xl" />, name: "JavaScript", border: "border-yellow-400" },
-    //   { icon: <SiJquery className="text-blue-400 text-5xl" />, name: "jQuery", border: "border-blue-400" },
-    //   { icon: <FaReact className="text-cyan-400 text-5xl" />, name: "React JS", border: "border-cyan-400" },
-    //   { icon: <FaNodeJs className="text-green-500 text-5xl" />, name: "Node JS", border: "border-green-500" },
-    //   { icon: <SiExpress className="text-gray-400 text-5xl" />, name: "Express JS", border: "border-gray-400" },
-    //   { icon: <SiMongodb className="text-green-600 text-5xl" />, name: "MongoDB", border: "border-green-600" },
-    // ];
 
     const skills = [
       { icon: <FaHtml5 className="text-white text-5xl" />, name: "HTML", border: "border-white" },
@@ -58,7 +46,7 @@ const ContextProvider = ({children}) => {
         company: "ILife Technologies",
         responsibilities: [
             "Conducted internships, workshops, and MERN stack courses.",
-            "Trained 300+ students with hands-on projects and guidance.",
+            "Trained 500+ students with hands-on projects and guidance.",
             "Delivered structured classes on frontend and backend development.",
             "Contributed to in-house development projects and scalable applications.",
         ],
