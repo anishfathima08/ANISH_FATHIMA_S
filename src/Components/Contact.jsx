@@ -24,9 +24,7 @@ const Contact = () => {
     const phoneNumber = "917339470506"; // include country code
 
     const message = `Hello, I am ${name}, ${subject}`;
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(url, "_blank");
   };
@@ -34,13 +32,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-14 px-6 lg:px-0 overflow-hidden">
       {/* Heading */}
-      <h2
-        className="text-5xl font-bold text-center text-white mb-16"
-        data-aos="fade-up"
-      >
-        <span style={{ fontFamily: "'Dancing Script', cursive" }}>
-          Let’s Connect
-        </span>
+      <h2 className="text-5xl font-bold text-center text-white mb-16" data-aos="fade-up">
+        <span style={{ fontFamily: "'Dancing Script', cursive" }}>Let’s Connect</span>
       </h2>
 
       {/* Form */}
@@ -48,13 +41,11 @@ const Contact = () => {
         <form
           onSubmit={handleSubmit}
           className="bg-zinc-900/80 border border-zinc-400 rounded-2xl py-10 px-6 space-y-10"
-        >
+          data-aos="fade-up" // form card animation
+          data-aos-delay="50"
+          data-aos-duration="800">
           {/* Name */}
-          <div
-            className="relative"
-            data-aos="fade-right"
-            data-aos-delay="100"
-          >
+          <div className="relative" data-aos="fade-right" data-aos-delay="100">
             <input
               type="text"
               name="name"
@@ -70,11 +61,7 @@ const Contact = () => {
           </div>
 
           {/* Message */}
-          <div
-            className="relative"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
+          <div className="relative" data-aos="fade-left" data-aos-delay="200">
             <textarea
               name="subject"
               rows="3"
@@ -90,15 +77,10 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <div
-            className="flex justify-center"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          >
+          <div className="flex justify-center" data-aos="zoom-in" data-aos-delay="300">
             <button
               type="submit"
-              className="cursor-pointer flex items-center justify-center gap-2 p-3 rounded-lg border border-white text-white font-semibold tracking-wide hover:bg-white hover:text-black transition"
-            >
+              className="cursor-pointer flex items-center justify-center gap-2 p-3 rounded-lg border border-white text-white font-semibold tracking-wide hover:bg-white hover:text-black transition">
               <FiSend className="text-xl" />
               Send on WhatsApp
             </button>
