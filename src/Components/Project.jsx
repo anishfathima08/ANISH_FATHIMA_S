@@ -6,9 +6,13 @@ const Project = () => {
   return (
     <section
       id="projects"
-      className="py-14 min-h-screen" 
+      className="py-14 min-h-screen overflow-hidden"
     >
-      <h2 className="text-5xl font-bold text-center text-white mb-12">
+      <h2
+        className="text-5xl font-bold text-center text-white mb-12"
+        data-aos="fade-down"
+        data-aos-duration="1200"
+      >
         <span
           className="text-white"
           style={{ fontFamily: "'Dancing Script', cursive" }}
@@ -17,11 +21,18 @@ const Project = () => {
         </span>
       </h2>
 
-      <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0">
+      <div
+        className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
         {projects.map((project, index) => (
           <div
             key={index}
             className="relative group border border-zinc-400 bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105"
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos-delay={index * 150}
+            data-aos-duration="1200"
           >
             {/* Project Image */}
             <img
@@ -31,7 +42,6 @@ const Project = () => {
             />
 
             {/* Hover Overlay */}
-
             <div className="absolute inset-0 bg-black/80 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition">
               <a
                 href={project.github}
@@ -50,7 +60,6 @@ const Project = () => {
                 <FaExternalLinkAlt />
               </a>
             </div>
-
 
             {/* Content */}
             <div className="p-5 text-white">

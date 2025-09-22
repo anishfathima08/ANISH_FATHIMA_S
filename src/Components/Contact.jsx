@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     subject: "",
   });
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 });
+  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,9 +32,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-14 px-6 lg:px-0">
+    <section id="contact" className="py-14 px-6 lg:px-0 overflow-hidden">
       {/* Heading */}
-      <h2 className="text-5xl font-bold text-center text-white mb-16">
+      <h2
+        className="text-5xl font-bold text-center text-white mb-16"
+        data-aos="fade-up"
+      >
         <span style={{ fontFamily: "'Dancing Script', cursive" }}>
           Let’s Connect
         </span>
@@ -36,17 +45,16 @@ const Contact = () => {
 
       {/* Form */}
       <div className="max-w-2xl mx-auto">
-        {/* <form
-          onSubmit={handleSubmit}
-          className="bg-zinc-900/80 border border-zinc-100 rounded-2xl p-10 
-          shadow-[0_0_25px_rgba(192,192,192,0.35)] space-y-10"
-        > */}
         <form
           onSubmit={handleSubmit}
           className="bg-zinc-900/80 border border-zinc-400 rounded-2xl py-10 px-6 space-y-10"
         >
           {/* Name */}
-          <div className="relative">
+          <div
+            className="relative"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <input
               type="text"
               name="name"
@@ -62,7 +70,11 @@ const Contact = () => {
           </div>
 
           {/* Message */}
-          <div className="relative">
+          <div
+            className="relative"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
             <textarea
               name="subject"
               rows="3"
@@ -78,7 +90,11 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <div className="flex justify-center">
+          <div
+            className="flex justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             <button
               type="submit"
               className="cursor-pointer flex items-center justify-center gap-2 p-3 rounded-lg border border-white text-white font-semibold tracking-wide hover:bg-white hover:text-black transition"
