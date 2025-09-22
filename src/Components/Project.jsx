@@ -6,7 +6,7 @@ const Project = () => {
   return (
     <section
       id="projects"
-      className="py-8 min-h-screen" 
+      className="py-14 min-h-screen" 
     >
       <h2 className="text-5xl font-bold text-center text-white mb-12">
         <span
@@ -17,11 +17,11 @@ const Project = () => {
         </span>
       </h2>
 
-      <div className="max-w-6xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0">
+      <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative group bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105"
+            className="relative group border border-zinc-400 bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105"
           >
             {/* Project Image */}
             <img

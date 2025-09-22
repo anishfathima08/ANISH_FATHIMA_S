@@ -18,23 +18,22 @@ const ContextProvider = ({children}) => {
         { id: "experience", label: "Experience" },
         { id: "projects", label: "Projects" },
         { id: "education", label: "Education" },
-        { id: "certificates", label: "Certificates" },
         { id: "contact", label: "Contact" },
     ];
 
     // Skills
 
     const skills = [
-      { icon: <FaHtml5 className="text-white text-5xl" />, name: "HTML", border: "border-white" },
-      { icon: <FaCss3Alt className="text-white text-5xl" />, name: "CSS", border: "border-white" },
-      { icon: <FaBootstrap className="text-white text-5xl" />, name: "Bootstrap", border: "border-white" },
-      { icon: <SiTailwindcss className="text-white text-5xl" />, name: "Tailwind CSS", border: "border-white" },
-      { icon: <FaJs className="text-white text-5xl" />, name: "JavaScript", border: "border-white" },
+      { icon: <FaHtml5 className="text-white text-5xl" />, name: "HTML", border: "border-zinc-400" },
+      { icon: <FaCss3Alt className="text-white text-5xl" />, name: "CSS", border: "border-zinc-400" },
+      { icon: <FaBootstrap className="text-white text-5xl" />, name: "Bootstrap", border: "border-zinc-400" },
+      { icon: <SiTailwindcss className="text-white text-5xl" />, name: "Tailwind CSS", border: "border-zinc-400" },
+      { icon: <FaJs className="text-white text-5xl" />, name: "JavaScript", border: "border-zinc-400" },
       { icon: <SiJquery className="text-whtie text-5xl" />, name: "jQuery", border: "border-whtie" },
-      { icon: <FaReact className="text-white text-5xl" />, name: "React JS", border: "border-white" },
-      { icon: <FaNodeJs className="text-white text-5xl" />, name: "Node JS", border: "border-white" },
-      { icon: <SiExpress className="text-white text-5xl" />, name: "Express JS", border: "border-white" },
-      { icon: <SiMongodb className="text-white text-5xl" />, name: "MongoDB", border: "border-white" },
+      { icon: <FaReact className="text-white text-5xl" />, name: "React JS", border: "border-zinc-400" },
+      { icon: <FaNodeJs className="text-white text-5xl" />, name: "Node JS", border: "border-zinc-400" },
+      { icon: <SiExpress className="text-white text-5xl" />, name: "Express JS", border: "border-zinc-400" },
+      { icon: <SiMongodb className="text-white text-5xl" />, name: "MongoDB", border: "border-zinc-400" },
     ];
 
     // Experience

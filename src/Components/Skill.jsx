@@ -10,7 +10,7 @@ const Skill = () => {
   const { skills } = useContext(myContext)
 
   return (
-    <section id="skills" className="lg:px-15 py-4 lg:mx-0 mx-5">
+    <section id="skills" className="max-w-7xl mx-auto py-14 px-4 lg:px-0">
       <h1 className="text-5xl font-bold text-center text-white mb-10">
         <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>Tech Stack</span>
       </h1>
@@ -36,7 +36,7 @@ const Skill = () => {
         {skills.map((skill, index) => (
           <SwiperSlide key={index}>
             <div
-              className={`flex flex-col items-center justify-center lg:h-32 lg:w-40 rounded-lg border ${skill.border} shadow-lg text-white transition-transform duration-300 hover:scale-120 my-5 lg:py-0 py-3 md:py-8`}
+              className={`flex flex-col items-center justify-center lg:h-32 lg:w-40 rounded-lg border ${skill.border} shadow-lg text-white transition-transform duration-300 hover:scale-120 my-5 lg:py-0 py-3 md:py-8 mx-auto`}
             >
               {skill.icon}
               <p className="mt-2 text-sm font-semibold">{skill.name}</p>

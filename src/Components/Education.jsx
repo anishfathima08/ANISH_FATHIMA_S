@@ -6,8 +6,8 @@ const Education = () => {
   const { education } = useContext(myContext)
 
   return (
-    <section id="education" className="py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="education" className="py-14 px-6 lg:px-0">
+      <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-5xl font-bold text-center mb-12">
           <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>Education</span>
@@ -22,7 +22,7 @@ const Education = () => {
             <div key={index} className={`mb-12 flex w-full ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
               {/* Card */}
               <div
-                className={`relative w-[calc(50%-2rem)] p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-zinc-800 hover:-translate-y-1 transition-transform duration-300`}>
+                className={`relative w-[calc(50%-2rem)] p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-zinc-400 hover:-translate-y-1 transition-transform duration-300`}>
                 <h3 className="text-xl font-semibold text-white">{edu.title}</h3>
                 <p className="text-sm text-zinc-400">{edu.institution}</p>
                 <p className="mt-2 text-white font-medium">{edu.period}</p>

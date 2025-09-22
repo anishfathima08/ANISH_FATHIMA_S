@@ -8,22 +8,19 @@ import Project from "../Components/Project";
 import Contact from "../Components/Contact";
 import Education from "../Components/Education";
 import Experience from "../Components/Experience";
-import Certificate from "../Components/Certificate";
 
 const Home = () => {
   return (
     <>
       <Header />
-      {/* <Hero /> */}
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <Hero />
       <About />
       <Skill />
       <Experience />
       <Project />
       <Education />
-      {/* <Certificate /> */}
       <Contact />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

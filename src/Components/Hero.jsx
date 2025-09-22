@@ -1,19 +1,18 @@
-import React, { useContext } from "react";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FaDownload, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaDownload, FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const Hero = () => {
-  
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center text-center lg:pt-35 lg:py-12 pt-30 py-12"
+      className="relative flex items-center justify-center text-center pt-30 lg:pt-35 pb-14"
     >
       {/* Hero Content */}
-      <div className="max-w-3xl">
-        {/* Static Name */}
-        <h1 className="text-4xl md:text-6xl font-bold text-white">
-          <span className="bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent" style={{ fontFamily: "'Dancing Script', cursive" }}>
+      <div className="max-w-3xl space-y-10">
+        {/* Name */}
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          <span style={{ fontFamily: "'Dancing Script', cursive" }}>
             Hi, I'm Anis Fathima
           </span>
         </h1>
@@ -36,20 +35,25 @@ const Hero = () => {
           />
         </h2>
 
-        {/* Quote */}
-        <div className="mt-6 space-y-2 text-lg md:text-xl text-zinc-400">
+        {/* Tagline */}
+        <div className="mt-6 text-lg md:text-xl text-zinc-400 italic space-y-1">
           <p>"Turning ideas into reality."</p>
-          <p>"Building smooth and interactive web experiences."</p>
-          <p>"Passionate about clean, modern UI & scalable solutions."</p>
+          <p>"Crafting smooth and scalable web experiences."</p>
         </div>
 
         {/* Social Icons */}
-        <div className="mt-6 flex justify-center gap-6">
+        <div className="mt-8 flex justify-center gap-6">
+          <a
+            href="mailto:anisfathima324@gmail.com"
+            className="text-3xl text-zinc-400 hover:text-white transition-transform duration-300 hover:scale-120"
+          >
+            <FaEnvelope />
+          </a>
           <a
             href="https://www.linkedin.com/in/anishfathima/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl text-zinc-300 transition-transform duration-300 hover:scale-125 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+            className="text-3xl text-zinc-400 hover:text-white transition-transform duration-300 hover:scale-120"
           >
             <FaLinkedin />
           </a>
@@ -57,20 +61,31 @@ const Hero = () => {
             href="https://github.com/anishfathima08"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-3xl text-zinc-300 transition-transform duration-300 hover:scale-125 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+            className="text-3xl text-zinc-400 hover:text-white transition-transform duration-300 hover:scale-120"
           >
             <FaGithub />
           </a>
         </div>
 
-        {/* Download Button */}
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        {/* Action Buttons */}
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          {/* Resume Button */}
           <a
-            href="/AnishFathimaResume.pdf"
+            href="/AnisFathimaResume.pdf"
             download
-            className="flex items-center gap-2 px-6 py-3 rounded-xl text-white bg-gradient-to-r from-fuchsia-500 via-indigo-500 to-cyan-500 shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-[0_0_12px_rgba(255,255,255,0.7)]"
+            className="flex items-center gap-2 px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition duration-300"
           >
-            <FaDownload /> Download CV
+            <FaDownload /> Download Resume
+          </a>
+
+          {/* WhatsApp Button */}
+          <a
+            href="https://wa.me/917339470506"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition duration-300"
+          >
+            <FaWhatsapp /> Drop a Message
           </a>
         </div>
       </div>

@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-14 px-6 lg:px-0">
       {/* Heading */}
       <h2 className="text-5xl font-bold text-center text-white mb-16">
         <span style={{ fontFamily: "'Dancing Script', cursive" }}>
@@ -35,7 +35,7 @@ const Contact = () => {
       </h2>
 
       {/* Form */}
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-2xl mx-auto">
         {/* <form
           onSubmit={handleSubmit}
           className="bg-zinc-900/80 border border-zinc-100 rounded-2xl p-10 
@@ -43,7 +43,7 @@ const Contact = () => {
         > */}
         <form
           onSubmit={handleSubmit}
-          className="bg-zinc-900/80 border border-zinc-400 rounded-2xl p-10 space-y-10"
+          className="bg-zinc-900/80 border border-zinc-400 rounded-2xl py-10 px-6 space-y-10"
         >
           {/* Name */}
           <div className="relative">
@@ -78,13 +78,15 @@ const Contact = () => {
           </div>
 
           {/* Submit Button */}
-          <button
-            type="submit"
-            className="flex items-center justify-center gap-2 w-full py-3 rounded-lg border border-white text-white font-semibold tracking-wide hover:bg-white hover:text-black transition"
-          >
-            <FiSend className="text-xl" />
-            Send on WhatsApp
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="cursor-pointer flex items-center justify-center gap-2 p-3 rounded-lg border border-white text-white font-semibold tracking-wide hover:bg-white hover:text-black transition"
+            >
+              <FiSend className="text-xl" />
+              Send on WhatsApp
+            </button>
+          </div>
         </form>
       </div>
     </section>
