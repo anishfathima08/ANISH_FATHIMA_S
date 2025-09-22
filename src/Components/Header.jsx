@@ -117,7 +117,7 @@ const Header = () => {
                 href={`#${link.id}`}
                 className={`px-4 py-2 relative font-medium text-zinc-100 transition-all duration-300 ${
                   activeSection === link.id
-                    ? "after:absolute after:left-0 after:bottom-0 after:w-20 text-center after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300"
+                    ? "after:absolute after:left-0 after:bottom-0 after:w-full text-center after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300"
                     : "after:w-0"
                 } hover:text-black hover:bg-white hover:rounded-4xl`}
               >
