@@ -38,7 +38,7 @@ const Header = () => {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-4">
             {navLinks.map((link) => (
               <a
                 key={link.id}
@@ -47,7 +47,8 @@ const Header = () => {
                 className={`relative inline-block px-3 py-2 text-lg font-medium text-zinc-100 transition-all duration-300
                   after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300
                   ${activeSection === link.id ? "after:w-full" : "after:w-0"}
-                  hover:text-black hover:bg-white hover:rounded-4xl`}
+                  hover:after:w-full
+                  hover:text-white`}
               >
                 {link.label}
               </a>
