@@ -4,6 +4,7 @@ import ProjectImg3 from "./Projects/carecollege.png";
 import ProjectImg4 from "./Projects/mixtas.png";
 import ProjectImg5 from "./Projects/spotify.png";
 import ProjectImg6 from "./Projects/petzee.png";
+import ProjectImg7 from "./Projects/silambam.png";
 
 import MernCertificate from "./Certificates/MERNCourse.jpg";
 
@@ -61,8 +62,17 @@ export const projects = [
     tech: ["HTML", "CSS", "TAILWIND", "JAVASCRIPT", "REACT", "NODE JS", "EXPRESS JS", "MONGO DB"],
     github: "https://github.com/anishfathima08/Spotify_Clone_Full_Stack",
     live: "https://petzee-frontend.onrender.com/",
-  },
+  }
 ];
+
+export const liveProjects = [
+  {
+    title: "Silambam Association TamilNadu",
+    img: ProjectImg7,
+    desc: "A full-stack Spotify Clone built with the MERN stack, featuring authentication, playlist management, and music streaming functionality.",
+    live: "https://silambamtamilnadu.com/",
+  },
+]
 
 export const certificates = [
   {
