@@ -6,8 +6,6 @@ import ProjectImg5 from "./Projects/spotify.png";
 import ProjectImg6 from "./Projects/petzee.png";
 import ProjectImg7 from "./Projects/silambam.png";
 
-import MernCertificate from "./Certificates/MERNCourse.jpg";
-
 import AboutImg from './About/AboutImg.png'
 
 export const assets = {
@@ -60,7 +58,7 @@ export const projects = [
     img: ProjectImg6,
     desc: "A full-stack Spotify Clone built with the MERN stack, featuring authentication, playlist management, and music streaming functionality.",
     tech: ["HTML", "CSS", "TAILWIND", "JAVASCRIPT", "REACT", "NODE JS", "EXPRESS JS", "MONGO DB"],
-    github: "https://github.com/anishfathima08/Spotify_Clone_Full_Stack",
+    github: "https://github.com/anishfathima08/PetZee_Pet_Shop_Full_Stack",
     live: "https://petzee-frontend.onrender.com/",
   }
 ];
@@ -73,36 +71,3 @@ export const liveProjects = [
     live: "https://silambamtamilnadu.com/",
   },
 ]
-
-export const certificates = [
-  {
-    title: "MERN Stack Development",
-    provider: "ILife Academy",
-    img: MernCertificate,
-  },
-  {
-    title: "Frontend Development",
-    provider: "Coursera",
-    img: MernCertificate,
-  },
-  {
-    title: "JavaScript Essentials",
-    provider: "HackerRank",
-    img: MernCertificate,
-  },
-  {
-    title: "JavaScript Essentials",
-    provider: "HackerRank",
-    img: MernCertificate,
-  },
-  {
-    title: "JavaScript Essentials",
-    provider: "HackerRank",
-    img: MernCertificate,
-  },
-  {
-    title: "JavaScript Essentials",
-    provider: "HackerRank",
-    img: MernCertificate,
-  },
-];

@@ -1,6 +1,12 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import { FaDownload, FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import {
+  FaDownload,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -11,14 +17,23 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="max-w-3xl space-y-10">
         {/* Name */}
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+        <h1
+          className="text-4xl md:text-6xl font-bold text-white mb-4"
+          data-aos="fade-down"
+          data-aos-duration="1200"
+        >
           <span style={{ fontFamily: "'Dancing Script', cursive" }}>
-            Hi, I'm Anis Fathima
+            Hi, I'm Anish Fathima
           </span>
         </h1>
 
         {/* Typing Profession */}
-        <h2 className="mt-2 text-2xl md:text-4xl font-semibold text-zinc-300">
+        <h2
+          className="mt-2 text-2xl md:text-4xl font-semibold text-zinc-200"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="1200"
+        >
           <TypeAnimation
             sequence={[
               "MERN Stack Developer",
@@ -36,13 +51,23 @@ const Hero = () => {
         </h2>
 
         {/* Tagline */}
-        <div className="mt-6 text-lg md:text-xl text-zinc-400 italic space-y-1">
+        <div
+          className="mt-6 text-lg md:text-xl text-zinc-500 italic space-y-1"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          data-aos-duration="1200"
+        >
           <p>"Turning ideas into reality."</p>
           <p>"Crafting smooth and scalable web experiences."</p>
         </div>
 
         {/* Social Icons */}
-        <div className="mt-8 flex justify-center gap-6">
+        <div
+          className="mt-8 flex justify-center gap-6"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+          data-aos-duration="1200"
+        >
           <a
             href="mailto:anisfathima324@gmail.com"
             className="text-3xl text-zinc-400 hover:text-white transition-transform duration-300 hover:scale-120"
@@ -68,7 +93,12 @@ const Hero = () => {
         </div>
 
         {/* Action Buttons */}
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <div
+          className="mt-10 flex flex-wrap justify-center gap-4"
+          data-aos="fade-up"
+          data-aos-delay="800"
+          data-aos-duration="1200"
+        >
           {/* Resume Button */}
           <a
             href="/AnisFathimaResume.pdf"

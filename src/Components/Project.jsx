@@ -4,21 +4,40 @@ import { liveProjects, projects } from "../assets/assets";
 
 const Project = () => {
   return (
-    <section id="projects" className="py-14 min-h-screen">
-      <h2 className="text-5xl font-bold text-center text-white mb-12">
-        <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>
+    <section
+      id="projects"
+      className="py-14 min-h-screen overflow-hidden"
+    >
+      <h2
+        className="text-5xl font-bold text-center text-white mb-12"
+        data-aos="fade-down"
+        data-aos-duration="1200"
+      >
+        <span
+          className="text-white"
+          style={{ fontFamily: "'Dancing Script', cursive" }}
+        >
           Projects
         </span>
       </h2>
 
-      <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0">
+      <div
+        className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
         {projects.map((project, index) => (
-          <div key={index} className="relative group border border-zinc-400 bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105">
+          <div
+            key={index}
+            className="relative group border border-zinc-400 bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105"
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos-delay={index * 150}
+            data-aos-duration="1200"
+          >
             {/* Project Image */}
             <img src={project.img} alt={project.title} className="w-full h-52 object-cover" />
 
             {/* Hover Overlay */}
-
             <div className="absolute inset-0 bg-black/80 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition">
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white text-3xl transition-transform transform hover:-translate-y-2">
                 <FaGithub />

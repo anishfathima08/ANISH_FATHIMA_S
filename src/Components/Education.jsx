@@ -1,16 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { myContext } from "../Context/ContextProvider";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Education = () => {
-  
-  const { education } = useContext(myContext)
+  const { education } = useContext(myContext);
+
+  useEffect(() => {
+    AOS.init({ once: true, duration: 800 }); // initialize AOS
+  }, []);
 
   return (
-    <section id="education" className="py-14 px-6 lg:px-0">
+    <section id="education" className="py-14 px-6 lg:px-0 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-5xl font-bold text-center mb-12">
-          <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>Education</span>
+        <h2
+          className="text-5xl font-bold text-center mb-12"
+          data-aos="fade-up"
+        >
+          <span
+            className="text-white"
+            style={{ fontFamily: "'Dancing Script', cursive" }}
+          >
+            Education
+          </span>
         </h2>
 
         {/* Large Screen Timeline */}
@@ -19,11 +32,21 @@ const Education = () => {
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-zinc-700 -translate-x-1/2"></div>
 
           {education.map((edu, index) => (
-            <div key={index} className={`mb-12 flex w-full ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+            <div
+              key={index}
+              className={`mb-12 flex w-full ${
+                index % 2 === 0 ? "justify-start" : "justify-end"
+              }`}
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos-delay={index * 100}
+            >
               {/* Card */}
               <div
-                className={`relative w-[calc(50%-2rem)] p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-zinc-400 hover:-translate-y-1 transition-transform duration-300`}>
-                <h3 className="text-xl font-semibold text-white">{edu.title}</h3>
+                className="relative w-[calc(50%-2rem)] p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-md border border-zinc-400 hover:-translate-y-1 transition-transform duration-300"
+              >
+                <h3 className="text-xl font-semibold text-white">
+                  {edu.title}
+                </h3>
                 <p className="text-sm text-zinc-400">{edu.institution}</p>
                 <p className="mt-2 text-white font-medium">{edu.period}</p>
                 <p className="mt-3 text-zinc-300 text-sm">{edu.details}</p>
@@ -33,18 +56,23 @@ const Education = () => {
               <span className="absolute left-1/2 -translate-x-1/2 w-12 h-12 flex items-center justify-center rounded-full ring-4 bg-white text-black ring-black">
                 {edu.icon}
               </span>
-
             </div>
           ))}
         </div>
 
         {/* Mobile Timeline */}
-
         <div className="lg:hidden relative border-l border-gray-700">
           {education.map((edu, index) => (
-            <div key={index} className="mb-10 ml-6 group">
+            <div
+              key={index}
+              className="mb-10 ml-6 group"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               {/* Icon */}
-              <span className="absolute flex items-center justify-center w-10 h-10 bg-white text-black rounded-full -left-5 ring-4 ring-black">{edu.icon}</span>
+              <span className="absolute flex items-center justify-center w-10 h-10 bg-white text-black rounded-full -left-5 ring-4 ring-black">
+                {edu.icon}
+              </span>
 
               {/* Card */}
               <div className="p-6 bg-zinc-900 rounded-2xl transform transition-transform duration-300 group-hover:-translate-y-2">
