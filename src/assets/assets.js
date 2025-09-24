@@ -9,8 +9,11 @@ import ProjectImg8 from "./Projects/pht.png";
 
 import AboutImg from './About/AboutImg.png'
 
+import MyResume from './Anish_Fathima_Resume.pdf'
+
 export const assets = {
-  AboutImg
+  AboutImg,
+  MyResume
 }
 
 export const projects = [

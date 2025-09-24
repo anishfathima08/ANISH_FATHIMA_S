@@ -7,6 +7,7 @@ import {
   FaEnvelope,
   FaWhatsapp,
 } from "react-icons/fa";
+import { assets } from "../assets/assets";
 
 const Hero = () => {
   return (
@@ -100,13 +101,15 @@ const Hero = () => {
           data-aos-duration="1200"
         >
           {/* Resume Button */}
-          <a
-            href="/AnisFathimaResume.pdf"
-            download
-            className="flex items-center gap-2 px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition duration-300"
-          >
-            <FaDownload /> Download Resume
-          </a>
+<a
+  href={assets.MyResume}
+  download
+  className="flex items-center gap-2 px-6 py-3 border border-white text-white rounded-lg hover:bg-white hover:text-black transition duration-300"
+>
+  <FaDownload /> Download Resume
+</a>
+
+
 
           {/* WhatsApp Button */}
           <a
