@@ -4,36 +4,21 @@ import { liveProjects, projects } from "../assets/assets";
 
 const Project = () => {
   return (
-    <section
-      id="projects"
-      className="py-14 min-h-screen overflow-hidden"
-    >
-      <h2
-        className="text-5xl font-bold text-center text-white mb-12"
-        data-aos="fade-down"
-        data-aos-duration="1200"
-      >
-        <span
-          className="text-white"
-          style={{ fontFamily: "'Dancing Script', cursive" }}
-        >
+    <section id="projects" className="py-14 min-h-screen overflow-hidden">
+      <h2 className="text-5xl font-bold text-center text-white mb-12" data-aos="fade-down" data-aos-duration="1200">
+        <span className="text-white" style={{ fontFamily: "'Dancing Script', cursive" }}>
           Projects
         </span>
       </h2>
 
-      <div
-        className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-      >
+      <div className="max-w-7xl mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-0" data-aos="fade-up" data-aos-duration="1200">
         {projects.map((project, index) => (
           <div
             key={index}
             className="relative group border border-zinc-400 bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105"
             data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
             data-aos-delay={index * 150}
-            data-aos-duration="1200"
-          >
+            data-aos-duration="1200">
             {/* Project Image */}
             <img src={project.img} alt={project.title} className="w-full h-52 object-cover" />
 
@@ -62,7 +47,12 @@ const Project = () => {
           </div>
         ))}
         {liveProjects.map((project, index) => (
-          <div key={index} className="relative group border border-zinc-400 bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105">
+          <div
+            key={index}
+            className="relative group border border-zinc-400 bg-zinc-900 rounded-2xl overflow-hidden shadow-lg transition hover:scale-105"
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            data-aos-delay={index * 150}
+            data-aos-duration="1200">
             {/* Project Image */}
             <img src={project.img} alt={project.title} className="w-full h-52 object-cover" />
 
@@ -76,6 +66,13 @@ const Project = () => {
 
             {/* Content */}
             <div className="p-5 text-white">
+              <div className="mb-3 flex flex-wrap gap-2">
+                {project.tech.map((t, i) => (
+                  <span key={i} className="px-2 py-1 text-xs rounded-lg bg-zinc-800 border border-zinc-600">
+                    {t}
+                  </span>
+                ))}
+              </div>
               <h3 className="text-xl font-semibold">{project.title}</h3>
               <p className="text-sm text-zinc-400 mt-2">{project.desc}</p>
             </div>

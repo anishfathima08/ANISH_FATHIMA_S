@@ -5,6 +5,7 @@ import ProjectImg4 from "./Projects/mixtas.png";
 import ProjectImg5 from "./Projects/spotify.png";
 import ProjectImg6 from "./Projects/petzee.png";
 import ProjectImg7 from "./Projects/silambam.png";
+import ProjectImg8 from "./Projects/pht.png";
 
 import AboutImg from './About/AboutImg.png'
 
@@ -67,7 +68,15 @@ export const liveProjects = [
   {
     title: "Silambam Association TamilNadu",
     img: ProjectImg7,
-    desc: "A full-stack Spotify Clone built with the MERN stack, featuring authentication, playlist management, and music streaming functionality.",
+    desc: "Designed and developed a responsive user interface for the official association website, delivering a clean layout with smooth navigation and improved accessibility.",
     live: "https://silambamtamilnadu.com/",
+    tech: ["LIVE PROJECT"],
+  },
+  {
+    title: "Prime Harness Technologies",
+    img: ProjectImg8,
+    desc: "Developed the complete user interface for Prime Harness Technologies’ website, creating a responsive, user-friendly design that highlights products, services.",
+    live: "https://phtindia.com/",
+    tech: ["LIVE PROJECT"],
   },
 ]

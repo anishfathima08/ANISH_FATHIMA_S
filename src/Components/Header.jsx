@@ -25,7 +25,7 @@ const Header = () => {
   }, [navLinks]);
 
   return (
-    <header className="fixed top-5 w-full z-50">
+    <header className="fixed top-3 w-full z-50">
       <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/20">
         <nav className="px-4 flex items-center justify-between h-16">
           {/* Logo */}
