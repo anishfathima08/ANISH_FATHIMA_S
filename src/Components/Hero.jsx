@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex items-center justify-center text-center pt-30 lg:pt-35 pb-14"
+      className="relative flex items-center justify-center text-center pt-30 lg:pt-45 pb-14"
     >
       {/* Hero Content */}
       <div className="max-w-3xl space-y-10">
