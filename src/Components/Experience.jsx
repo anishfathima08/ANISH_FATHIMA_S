@@ -6,7 +6,7 @@ const Experience = () => {
   const { experiences } = useContext(myContext);
 
   return (
-    <section id="experience" className="py-14 px-4 lg:px-0 overflow-hidden">
+    <section id="experience" className="py-14 px-6 lg:px-0 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2

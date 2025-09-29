@@ -35,7 +35,7 @@ const Skill = () => {
       >
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={30}
+          spaceBetween={28}
           slidesPerView={5}
           loop={true}
           autoplay={{
@@ -54,7 +54,7 @@ const Skill = () => {
           {skills.map((skill, index) => (
             <SwiperSlide key={index}>
               <div
-                className={`flex flex-col items-center justify-center lg:h-32 lg:w-40 rounded-lg border ${skill.border} shadow-lg text-white transition-transform duration-300 hover:scale-120 my-5 lg:py-0 py-3 md:py-8 mx-auto`}
+                className={`flex flex-col items-center justify-center lg:h-32 lg:w-40 rounded-lg border ${skill.border} shadow-lg text-white transition-transform duration-300 hover:scale-120 my-5 lg:py-0 py-7 md:py-8 mx-auto`}
               >
                 {skill.icon}
                 <p className="mt-2 text-sm font-semibold">{skill.name}</p>

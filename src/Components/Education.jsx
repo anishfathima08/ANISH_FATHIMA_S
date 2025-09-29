@@ -70,7 +70,7 @@ const Education = () => {
               data-aos-delay={index * 100}
             >
               {/* Icon */}
-              <span className="absolute flex items-center justify-center w-10 h-10 bg-white text-black rounded-full -left-5 ring-4 ring-black">
+              <span className="absolute flex items-center justify-center w-10 h-10 bg-white text-black rounded-full -left-11 ring-4 ring-black">
                 {edu.icon}
               </span>
 
