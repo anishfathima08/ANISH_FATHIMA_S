@@ -53,7 +53,7 @@ const Hero = () => {
 
         {/* Tagline */}
         <div
-          className="mt-6 text-lg md:text-xl text-zinc-500 italic space-y-1"
+          className="mt-6 text-lg md:text-xl text-zinc-300 italic space-y-1"
           data-aos="fade-up"
           data-aos-delay="400"
           data-aos-duration="1200"
