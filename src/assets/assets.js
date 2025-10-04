@@ -6,6 +6,7 @@ import ProjectImg5 from "./Projects/spotify.png";
 import ProjectImg6 from "./Projects/petzee.png";
 import ProjectImg7 from "./Projects/silambam.png";
 import ProjectImg8 from "./Projects/pht.png";
+import ProjectImg9 from './Projects/vitecode.png'
 
 import AboutImg from './About/AboutImg.png'
 
@@ -23,7 +24,7 @@ export const projects = [
     desc: "A car e-commerce website showcasing different car models with a clean and responsive design. Built to provide a smooth browsing experience with structured layouts and modern UI styling.",
     tech: ["HTML", "CSS", "BOOTSTRAP"],
     github: "https://github.com/anishfathima08/CarVilla",
-    live: "https://carvilla-saf.netlify.app/",
+    live: "https://carvilla-saf.vercel.app/",
   },
   {
     title: "SpicyHut",
@@ -31,7 +32,7 @@ export const projects = [
     desc: "A responsive restaurant website designed to showcase menu items, special offers, and dining experience. Includes interactive elements and smooth navigation for an engaging user experience.",
     tech: ["HTML", "CSS", "BOOTSTRAP", "AOS"],
     github: "https://github.com/anishfathima08/SpicyHut",
-    live: "https://spicyhut-saf.netlify.app/",
+    live: "https://spicyhut-saf.vercel.app/",
   },
   {
     title: "Care College Website",
@@ -39,7 +40,7 @@ export const projects = [
     desc: "A responsive college website built to showcase courses, facilities, and campus details with a clean and modern layout. Designed using Bootstrap for mobile-friendly adaptability and smooth navigation.",
     tech: ["HTML", "CSS", "BOOTSTRAP", "AOS"],
     github: "https://github.com/anishfathima08/CareCollege",
-    live: "https://carecollege-saf.netlify.app/",
+    live: "https://carecollege-saf.vercel.app/",
   },
   {
     title: "Mixtas - E Commerce",
@@ -55,7 +56,7 @@ export const projects = [
     desc: "A full-stack Spotify Clone built with the MERN stack, featuring authentication, playlist management, and music streaming functionality.",
     tech: ["HTML", "CSS", "TAILWIND", "JAVASCRIPT", "REACT", "NODE JS", "EXPRESS JS", "MONGO DB"],
     github: "https://github.com/anishfathima08/Spotify_Clone_Full_Stack",
-    live: "https://spotify-clone-frontend-qmdh.onrender.com/",
+    live: "https://spotify-saf.vercel.app/",
   },
   {
     title: "PetZee",
@@ -63,7 +64,15 @@ export const projects = [
     desc: "A full-stack Spotify Clone built with the MERN stack, featuring authentication, playlist management, and music streaming functionality.",
     tech: ["HTML", "CSS", "TAILWIND", "JAVASCRIPT", "REACT", "NODE JS", "EXPRESS JS", "MONGO DB"],
     github: "https://github.com/anishfathima08/PetZee_Pet_Shop_Full_Stack",
-    live: "https://petzee-frontend.onrender.com/",
+    live: "https://petzee-saf.vercel.app/",
+  },
+  {
+    title: "ViteCode Tech",
+    img: ProjectImg9,
+    desc: "A dynamic MERN stack website for a tech academy featuring course management, service listings, admin dashboard, and an interactive contact form.",
+    tech: ["HTML", "CSS", "TAILWIND", "JAVASCRIPT", "REACT", "NODE JS", "EXPRESS JS", "MONGO DB"],
+    github: "https://github.com/anishfathima08/ViteCodeTech",
+    live: "https://vitecodetech-saf.vercel.app/",
   }
 ];
 

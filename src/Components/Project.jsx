@@ -23,7 +23,7 @@ const Project = () => {
             <img src={project.img} alt={project.title} className="w-full h-52 object-cover" />
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-black/80 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition">
+            <div className="hidden absolute inset-0 bg-black/80 lg:flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition">
               <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white text-3xl transition-transform transform hover:-translate-y-2">
                 <FaGithub />
               </a>
@@ -34,7 +34,17 @@ const Project = () => {
 
             {/* Content */}
             <div className="p-5 text-white">
-              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <div className="flex gap-5 items-center justify-between mb-4">
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <div className="flex gap-4 lg:hidden">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-white text-3xl transition-transform transform hover:-translate-y-2">
+                    <FaGithub />
+                  </a>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-white text-3xl transition-transform transform hover:-translate-y-2">
+                    <FaExternalLinkAlt />
+                  </a>
+                </div>
+              </div>
               <p className="text-sm text-zinc-400 mt-2">{project.desc}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {project.tech.map((t, i) => (

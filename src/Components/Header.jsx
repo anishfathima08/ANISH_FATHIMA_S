@@ -25,7 +25,7 @@ const Header = () => {
   }, [navLinks]);
 
   return (
-    <header className="fixed top-3 w-full z-50">
+    <header className="fixed top-3 w-full z-[9999] pointer-events-none">
       <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/20">
         <nav className="px-4 flex items-center justify-between h-16">
           {/* Logo */}
@@ -67,7 +67,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden mx-4 md:mx-8 mt-2 rounded-2xl bg-black/90 backdrop-blur-lg border border-white/10 shadow-lg shadow-white/10 transform transition-all duration-300 ease-in-out origin-top ${
+        className={`pointer-events-none lg:hidden mx-4 md:mx-8 mt-2 rounded-2xl bg-black/90 backdrop-blur-lg border border-white/10 shadow-lg shadow-white/10 transform transition-all duration-300 ease-in-out origin-top ${
           navbarOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
         }`}
       >
