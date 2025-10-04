@@ -24,7 +24,7 @@ const Hero = () => {
           data-aos-duration="1200"
         >
           <span style={{ fontFamily: "'Dancing Script', cursive" }}>
-            Anish Fathima S
+            Anish Fathima
           </span>
         </h1>
 
