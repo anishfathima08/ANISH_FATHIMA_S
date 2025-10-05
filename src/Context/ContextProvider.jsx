@@ -57,7 +57,7 @@ const ContextProvider = ({children}) => {
     const education = [
         {
         period: "June 2021 - May 2024",
-        title: "Bachelor of Computer Application ( BCA )",
+        title: "Bachelor of Computer Applications ( BCA )",
         institution: "Aiman College of Arts and Science for Women, Trichy",
         details: "CGPA - 8.9",
         icon: <GraduationCap className="w-6 h-6 text-black" />,
