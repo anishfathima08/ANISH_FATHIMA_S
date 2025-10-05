@@ -25,69 +25,137 @@ const Header = () => {
   }, [navLinks]);
 
   return (
-    <header className="fixed top-3 w-full z-[9999] pointer-events-none">
-      <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/20">
-        <nav className="px-4 flex items-center justify-between h-16">
-          {/* Logo */}
-          <a
-            href="#home"
-            className="text-3xl font-bold tracking-tight"
-            style={{ fontFamily: "'Dancing Script', cursive" }}
-          >
-            Anish&nbsp;&nbsp;Fathima&nbsp;&nbsp;S
-          </a>
+    // <header className="fixed top-3 w-full z-[9999]">
+    //   <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/20 pointer-events-auto">
+    //     <nav className="px-4 flex items-center justify-between h-16">
+    //       {/* Logo */}
+    //       <a
+    //         href="#home"
+    //         className="text-3xl font-bold tracking-tight"
+    //         style={{ fontFamily: "'Dancing Script', cursive" }}
+    //       >
+    //         Anish&nbsp;&nbsp;Fathima&nbsp;&nbsp;S
+    //       </a>
 
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                onClick={() => setNavbarOpen(false)}
-                className={`relative inline-block px-3 py-2 text-lg font-medium text-zinc-100 transition-all duration-300
-                  after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300
-                  ${activeSection === link.id ? "after:w-full" : "after:w-0"}
-                  hover:after:w-full
-                  hover:text-white`}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+    //       {/* Desktop Menu */}
+    //       <div className="hidden lg:flex items-center space-x-4">
+    //         {navLinks.map((link) => (
+    //           <a
+    //             key={link.id}
+    //             href={`#${link.id}`}
+    //             onClick={() => setNavbarOpen(false)}
+    //             className={`relative inline-block px-3 py-2 text-lg font-medium text-zinc-100 transition-all duration-300
+    //               after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300
+    //               ${activeSection === link.id ? "after:w-full" : "after:w-0"}
+    //               hover:after:w-full
+    //               hover:text-white`}
+    //           >
+    //             {link.label}
+    //           </a>
+    //         ))}
+    //       </div>
 
-          {/* Mobile Hamburger */}
-          <button
-            className="lg:hidden text-white"
-            onClick={() => setNavbarOpen(!navbarOpen)}
-          >
-            {navbarOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
-          </button>
-        </nav>
-      </div>
+    //       {/* Mobile Hamburger */}
+    //       <button
+    //         className="lg:hidden text-white pointer-events-auto"
+    //         onClick={() => setNavbarOpen(!navbarOpen)}
+    //       >
+    //         {navbarOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+    //       </button>
+    //     </nav>
+    //   </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`pointer-events-none lg:hidden mx-4 md:mx-8 mt-2 rounded-2xl bg-black/90 backdrop-blur-lg border border-white/10 shadow-lg shadow-white/10 transform transition-all duration-300 ease-in-out origin-top ${
-          navbarOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
-        }`}
+    //   {/* Mobile Menu */}
+    //   <div
+    //     className={`pointer-events-none lg:hidden mx-4 md:mx-8 mt-2 rounded-2xl bg-black/90 backdrop-blur-lg border border-white/10 shadow-lg shadow-white/10 transform transition-all duration-300 ease-in-out origin-top ${
+    //       navbarOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+    //     }`}
+    //   >
+    //     <div className="flex flex-col items-center space-y-4 p-6">
+    //       {navLinks.map((link) => (
+    //         <a
+    //           key={link.id}
+    //           href={`#${link.id}`}
+    //           onClick={() => setNavbarOpen(false)}
+    //           className={`relative inline-block px-3 py-2 text-lg font-medium text-zinc-100 transition-all duration-300
+    //             after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300
+    //             ${activeSection === link.id ? "after:w-full" : "after:w-0"}
+    //             hover:text-black hover:bg-white hover:rounded-4xl`}
+    //         >
+    //           {link.label}
+    //         </a>
+    //       ))}
+    //     </div>
+    //   </div>
+    // </header>
+<header
+  className={`fixed top-3 w-full z-[9999] ${
+    navbarOpen ? "pointer-events-auto" : "pointer-events-none"
+  }`}
+>
+  <div className="mx-4 md:mx-8 rounded-full bg-black/30 backdrop-blur-md shadow-lg shadow-white/20 pointer-events-auto">
+    <nav className="px-4 flex items-center justify-between h-16">
+      {/* Logo */}
+      <a
+        href="#home"
+        className="text-3xl font-bold tracking-tight"
+        style={{ fontFamily: "'Dancing Script', cursive" }}
       >
-        <div className="flex flex-col items-center space-y-4 p-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={`#${link.id}`}
-              onClick={() => setNavbarOpen(false)}
-              className={`relative inline-block px-3 py-2 text-lg font-medium text-zinc-100 transition-all duration-300
-                after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300
-                ${activeSection === link.id ? "after:w-full" : "after:w-0"}
-                hover:text-black hover:bg-white hover:rounded-4xl`}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
+        Anish&nbsp;&nbsp;Fathima&nbsp;&nbsp;S
+      </a>
+
+      {/* Desktop Menu */}
+      <div className="hidden lg:flex items-center space-x-4">
+        {navLinks.map((link) => (
+          <a
+            key={link.id}
+            href={`#${link.id}`}
+            onClick={() => setNavbarOpen(false)}
+            className={`relative inline-block px-3 py-2 text-lg font-medium text-zinc-100 transition-all duration-300
+              after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300
+              ${activeSection === link.id ? "after:w-full" : "after:w-0"}
+              hover:after:w-full hover:text-white`}
+          >
+            {link.label}
+          </a>
+        ))}
       </div>
-    </header>
+
+      {/* Mobile Hamburger */}
+      <button
+        className="lg:hidden text-white pointer-events-auto"
+        onClick={() => setNavbarOpen(!navbarOpen)}
+      >
+        {navbarOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+      </button>
+    </nav>
+  </div>
+
+  {/* Mobile Menu */}
+  <div
+    className={`lg:hidden mx-4 md:mx-8 mt-2 rounded-2xl bg-black/90 backdrop-blur-lg border border-white/10 shadow-lg shadow-white/10 transform transition-all duration-300 ease-in-out origin-top pointer-events-auto ${
+      navbarOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0"
+    }`}
+  >
+    <div className="flex flex-col items-center space-y-4 p-6">
+      {navLinks.map((link) => (
+        <a
+          key={link.id}
+          href={`#${link.id}`}
+          onClick={() => setNavbarOpen(false)}
+          className={`relative inline-block px-3 py-2 text-lg font-medium text-zinc-100 transition-all duration-300
+            after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-white after:rounded-full after:transition-all after:duration-300
+            ${activeSection === link.id ? "after:w-full" : "after:w-0"}
+            hover:text-black hover:bg-white hover:rounded-4xl`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+  
   );
 };
 
